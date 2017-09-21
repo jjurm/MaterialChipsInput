@@ -23,3 +23,23 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keep class butterknife.** { *; }
+-dontwarn butterknife.internal.**
+-keep class **$$ViewBinder { *; }
+
+-keepclasseswithmembernames class * {
+    @butterknife.* <fields>;
+}
+
+-keepclasseswithmembernames class * {
+    @butterknife.* <methods>;
+}
+
+
+-keep class com.beloo.widget.chipslayoutmanager.* { *; }
+-keep class com.beloo.widget.chipslayoutmanager.** { *; }
+-keep class com.beloo.widget.chipslayoutmanager.*$* { *; }
+-keep class RestrictTo.*
+-keep class RestrictTo.**
+-keep class RestrictTo.*$*
